@@ -3,8 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-shadow-color: #232323;
+  --start-top: 100px;
+  --start-left: 40px;
   --primary-bg:#0A0A0A;
+  --primary-card: #2E85D9;
+  --primary-text-card: #72A6D7;
   --primary-text: #2E85D9;
+  --secondary-bg-card: #002D58;
+  --secondary-text: #72A6D7;
+
+  --secondary-bg-card-hover: #2E85D9;
+  --secondary-text-hover: #002D58;
+
 }
 
 @theme inline {
