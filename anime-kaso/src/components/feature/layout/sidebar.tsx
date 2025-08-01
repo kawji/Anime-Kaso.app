@@ -8,7 +8,7 @@ import TitleSidebar from "@/components/ui/sidebar/title";
 export default function Sidebar() {
     let namePath = usePathname();
     return(
-        <aside  className="flex flex-col gap-2 left-0 w-full lg:w-[20vw] pt-[var(--start-top)] pl-[var(--start-left)] h-screen bg-black  ">
+        <aside  className="flex flex-col gap-2 left-0 shrink-0 sm:w-[260px] pt-[var(--start-top)] pl-[var(--start-left)] h-screen bg-black  ">
             <TitleSidebar title='หมวดหมู่' />
 
             {sidebarMenu.map((item) =>{
