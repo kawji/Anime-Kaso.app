@@ -1,11 +1,13 @@
 // ui
-import TitleContent from "@/components/ui/main-content/titleContent";
-import ContainerAnime from "@/components/ui/main-content/containerAnime";
-import CardAnime from "@/components/ui/main-content/cardAnime";
+import TitleContent from "@/components/ui/main-content/main-anime/titleContent";
+import ContainerAnime from "@/components/ui/main-content/main-anime/containerAnime";
+import CardAnime from "@/components/ui/main-content/main-anime/cardAnime";
+import CarouselAnime from "@/components/ui/main-content/carousel/carouselAnime";
 
 export default function MainContent() {
     return(
-        <main className="flex flex-col flex-1 gap-5 lg:gap-15 w-full minh-h-screen pt-[var(--start-top)] pl-[var(--start-left)] ">
+        <main className="flex flex-col flex-1 gap-5 lg:gap-12 w-full minh-h-screen">
+            <CarouselAnime />
             <TitleContent title="อนิเมะล่าสุด" />
             <ContainerAnime>            
                 <CardAnime />
