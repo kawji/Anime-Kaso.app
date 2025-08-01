@@ -15,7 +15,15 @@
 
   --secondary-bg-card-hover: #2E85D9;
   --secondary-text-hover: #002D58;
+  
+  --primary-card1-text: #87C5FF;
+  --primary-card1-border: #87C5FF;
+  --primary-card1-bg: #002D58;
 
+  --color-primary: #2E85D9;
+  --color-dense: #002D58;
+  --color-pale: #87C5FF;
+  
 }
 
 @theme inline {
