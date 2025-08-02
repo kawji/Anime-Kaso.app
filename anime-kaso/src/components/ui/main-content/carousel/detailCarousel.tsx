@@ -1,12 +1,9 @@
+'use client'
+// type
+import { guideAnimeDetailType } from "@/type/guideAnime";
 
 
-type Props = {
-    title: string;
-    subtitles: string;
-    chapter: number;
-}
-
-export default function DetailCarousel({ title ,subtitles ,chapter }:Props) {
+export default function DetailCarousel({ title ,subtitles ,chapter }:guideAnimeDetailType) {
     return(
         <section className="flex gap-5 flex-col flex-1 pl-8 pt-8" >
             <p className=" lg:text-[22px] transition-colors  text-white/85 font-light line-clamp-1 cursor-pointer group-hover:text-[var(--color-pale)] " > {title} </p>
