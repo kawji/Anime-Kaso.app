@@ -1,6 +1,5 @@
 'use client'
-import { SwiperSlide } from "swiper/react";
-
+import { motion } from "motion/react";
 // ui
 import ImageCarousel from "./imageCarousel";
 import CaptionCarousel from "./captionCarousel";
@@ -12,11 +11,9 @@ type Props = {
 }
 export default function SlideCarousel({ title ,subtitles ,chapter ,path }:Props) {
     return(
-        <div >
-            <figure className="relative w-full h-[40vh] lg:h-[65vh] overflow-hidden cursor-pointer group rounded-2xl ">
-                <ImageCarousel path={path} />
-                <CaptionCarousel title={title} subtitles={subtitles} chapter={chapter} />
-            </figure>
-        </div>
+        <figure className="relative w-full  h-[40vh] lg:h-[65vh] overflow-hidden cursor-pointer group rounded-2xl ">
+            <ImageCarousel path={path} />
+            <CaptionCarousel title={title} subtitles={subtitles} chapter={chapter} />
+        </figure>
     );
 }
