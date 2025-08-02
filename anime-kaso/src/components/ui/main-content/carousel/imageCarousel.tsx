@@ -1,3 +1,4 @@
+'use client'
 
 import Image from "next/image"
 
@@ -6,12 +7,13 @@ type Props = {
 }
 
 export default function ImageCarousel({ path }:Props) {
-    const fullPath = `/carousel/${path}.jpg`
+    const fullPath = `/carousel/${path}`
     return(
         <Image
             src={fullPath} 
             fill
-            className=" object-cover group-hover:scale-104 transition-all duration-800 ease-in-out " 
+            sizes="(max-width: 1024px)"
+            className="w-full h-full object-cover group-hover:scale-104 transition-all duration-800 ease-in-out " 
             alt="carousel image"
         />
     );
