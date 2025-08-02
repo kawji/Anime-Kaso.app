@@ -2,7 +2,7 @@
 import TitleContent from "@/components/ui/main-content/main-anime/titleContent";
 import ContainerAnime from "@/components/ui/main-content/main-anime/containerAnime";
 import CardAnime from "@/components/ui/main-content/main-anime/cardAnime";
-import CarouselAnime from "@/components/ui/main-content/carousel/carouselAnime";
+import CarouselAnime from "@/components/ui/main-content/carousel/carouselMain";
 
 export default function MainContent() {
     return(
