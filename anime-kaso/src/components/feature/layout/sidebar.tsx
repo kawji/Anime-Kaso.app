@@ -12,7 +12,7 @@ import CardTopAnime from "@/components/ui/sidebar/cardTopAnime";
 export default function Sidebar() {
     let namePath = usePathname();
     return(
-        <aside  className="flex flex-col gap-15 left-0 shrink-0 sm:w-[260px] pt-[var(--start-top)] pl-[var(--start-left)] min-h-screen bg-black relative z-99 ">
+        <aside  className="flex flex-col gap-15 left-0 shrink-0 shadow-sm shadow-white/30 rounded-br-2xl sm:w-[260px] pt-[var(--start-top)] pl-[var(--start-left)] min-h-screen bg-[#161515] relative z-99 ">
             <div className="flex flex-col gap-2 shrink-0" >
                 <TitleSidebar title='หมวดหมู่' />
                 {sidebarMenu.map((item) =>{
