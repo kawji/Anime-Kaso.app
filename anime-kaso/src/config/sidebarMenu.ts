@@ -1,6 +1,6 @@
 export const sidebarMenu = [
     {section:'หน้าแรก', path:'/'},
-    {section:'อนิเมะทั้งหมด', path:'/anime-all'},
+    {section:'อนิเมะทั้งหมด', path:'/anime'},
     {section:'ซับไทย', path:'/sub-thai'},
     {section:'พากย์ไทย', path:'/thai'},
     {section:'อนิเมะ - Hentai', path:'/anime-hentai'},
