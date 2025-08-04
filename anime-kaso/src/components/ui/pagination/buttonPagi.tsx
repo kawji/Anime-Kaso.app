@@ -4,12 +4,12 @@ import clsx from "clsx";
 
 type Props = {
     page:number;
+    pageCurrent:number;
 }
 
-export default function ButtonPagination({ page }:Props) {
-    const searchParams = useSearchParams();
+export default function ButtonPagination({ page ,pageCurrent }:Props) {
     const router = useRouter();
-    const pageCurrent = Number(searchParams.get('page') || 1)
+
     const gotoPage = () => {
         router.push(`/anime?page=${page}`);
     }
