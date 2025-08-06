@@ -6,7 +6,8 @@ export function useAnimeList( page:number ) {
         queryKey:['anime',page],
         queryFn: async () => {
             const { data } = await axios.get(`https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`);
-            return data.data
+            console.log('API anime list =>',data)
+            return data
         },
         staleTime: 1000 * 60 * 5, // แคชไว้ 5 นาที
     })
