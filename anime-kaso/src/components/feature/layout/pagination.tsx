@@ -1,23 +1,13 @@
 'use client'
-import { useSearchParams } from "next/navigation";
 import ButtonPagination from "@/components/ui/pagination/buttonPagi";
-import { useEffect, useState } from "react";
-
+import { usePagination } from "@/hooks/usePagination";
 
 export default function Pagination() {
-    const searchParams = useSearchParams();
-    const [page ,setPage] = useState(1);
-
-    useEffect(() => {
-        setPage(Number(searchParams.get('page') || 1))
-    },[searchParams])
+    const {page  ,pageLast ,pageList} = usePagination()
     
     return(
-        <nav className="w-auto h-auto lg:h-15 bg-[#161515] border-white/25 border flex items-center gap-4 px-6 py-4 rounded-md  " >
-            
-            {[page-3,page-2,page-1,page,page+1,page+2,page+3,page+50].map((item)=><ButtonPagination page={item} pageCurrent={page} /> )}
-            
-
+        <nav className="max-w-[70vw] lg:ml-[80px] sm:ml-[45px] ml-4 w-[88%] h-auto lg:h-15 bg-[#161515] border-white/25 border flex items-center justify-center gap-4 px-6 py-4 rounded-md  " >
+            {pageList.map((item)=><ButtonPagination page={item} pageCurrent={page} key={item} /> )}
         </nav>
     );
 }
