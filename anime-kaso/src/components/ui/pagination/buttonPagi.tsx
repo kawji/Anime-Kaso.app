@@ -18,10 +18,10 @@ export default function ButtonPagination({ page ,pageCurrent }:Props) {
 
 
     return(
-        <button onClick={gotoPage} className={clsx("px-4 py-2.5 rounded-sm bg-[#161515] text-sm cursor-pointer hover:bg-white/40 hover:text-gray-900 transition-colors "
-            ,pageCurrent===page? 'bg-white/80 text-black/85':'text-white/75' 
+        <button onClick={gotoPage} className={clsx("px-4 py-2.5 rounded-sm bg-[#161515] cursor-pointer hover:bg-white/40 hover:text-gray-900 transition-colors "
+            ,pageCurrent===page? 'bg-white/80 text-black/85 text-[15px]':'text-white/75 text-sm' 
         )}>
-        {page >= pageCurrent ? page - 3 == pageCurrent? '>': page  : page+3 == pageCurrent ? '<' : page  }
+        {page }
     </button>
     );
 }
