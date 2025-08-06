@@ -9,6 +9,8 @@ import Pagination from "./pagination";
 import { useAnimeList } from "@/hooks/useAnimeList";
 import { TypeAnime } from "@/type/TypeAnime";
 import { usePathPagination } from "@/hooks/usePathPagination";
+import Loading from "@/components/ui/system/loading";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function MainContent() {
     const {pageNumber ,pageName} = usePathPagination()
@@ -27,12 +29,12 @@ export default function MainContent() {
         <main className="flex flex-col items-center flex-1 gap-0 lg:gap-5 w-full minh-h-screen pt-10 sm:pt-16 ">
             { pageName==='/'&& <CarouselAnime />}
             <ContainerTitle >
-                <TitleContent title="อนิเมะล่าสุด" />
+                {isLoading? <Loading key={uuidv4()} /> : <TitleContent title="อนิเมะล่าสุด" />}
             </ContainerTitle>
             <ContainerAnime>            
-                {animeList?.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                {isLoading? <Loading key={uuidv4()} /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
             </ContainerAnime>
-            <Pagination />
+            {isLoading? <Loading key={uuidv4()} /> : <Pagination />}
 
         </main>
     );
