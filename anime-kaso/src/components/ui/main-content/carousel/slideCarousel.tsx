@@ -11,7 +11,7 @@ type Props = {
 }
 export default function SlideCarousel({ title ,subtitles ,chapter ,path }:Props) {
     return(
-        <figure className="relative w-full  h-[40vh] lg:h-[65vh] overflow-hidden cursor-pointer group rounded-2xl ">
+        <figure className="relative w-full h-full  overflow-hidden group rounded-2xl ">
             <ImageCarousel path={path} />
             <CaptionCarousel title={title} subtitles={subtitles} chapter={chapter} />
         </figure>
