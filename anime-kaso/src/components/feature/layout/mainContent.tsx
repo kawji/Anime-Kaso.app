@@ -29,12 +29,12 @@ export default function MainContent() {
         <main className="flex flex-col items-center flex-1 gap-0 lg:gap-5 w-full minh-h-screen pt-10 sm:pt-16 ">
             { pageName==='/'&& <CarouselAnime />}
             <ContainerTitle >
-                {isLoading? <Loading key={uuidv4()} /> : <TitleContent title="อนิเมะล่าสุด" />}
+                {isLoading? <Loading key='loadingTitle' /> : <TitleContent title="อนิเมะล่าสุด" />}
             </ContainerTitle>
             <ContainerAnime>            
-                {isLoading? <Loading key={uuidv4()} /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                {isLoading? <Loading key='loadingAnimeList' /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
             </ContainerAnime>
-            {isLoading? <Loading key={uuidv4()} /> : <Pagination />}
+            {isLoading? <Loading key='loadingPagination' /> : <Pagination />}
 
         </main>
     );
