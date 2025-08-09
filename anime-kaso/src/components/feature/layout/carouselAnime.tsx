@@ -30,7 +30,7 @@ export default function CarouselAnime() {
 
     return(
             <div 
-                className="relative w-[80%] h-[40vh] lg:h-[54vh] group mt-10 overflow-hidden border-white/20 border rounded-2xl " 
+                className="relative max-w-[70vw] w-[88%] h-[40vh] lg:h-[54vh] group mt-10 overflow-hidden border-white/20 border rounded-2xl " 
                 onMouseEnter={pause}
                 onMouseLeave={startAutoplay}    
             >
