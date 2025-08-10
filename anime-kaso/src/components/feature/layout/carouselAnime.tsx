@@ -37,7 +37,7 @@ export default function CarouselAnime() {
                 <AnimatePresence>
                     <motion.div
                     key={index}
-                    initial={{ x:valueAnimate > 0 ? 1000:-1000 ,y:0  }}
+                    initial={{ x:valueAnimate > 0 ? 1000:-1000 ,y:0 ,opacity:0  }}
                     animate={{x:0 ,y:0,opacity:1}}
                     exit={{ x:valueAnimate > 0 ? -1200:1200,y:0 ,opacity:0.7 ,scale:0.8 }}
                     transition={{duration:2 ,ease: "easeInOut"}}
