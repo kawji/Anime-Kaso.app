@@ -1,16 +1,16 @@
+'use client'
 import "../globals.css";
 import Navbar from "@/components/feature/layout/navbar";
 
-export default function RootLayout({
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useState } from "react";
+
+export default function AnimeNoEnd({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-        <Navbar />
-        {children}
+  const [queryClient] = useState(() => new QueryClient())
 
-    </>
-  );
+  return children
 }
