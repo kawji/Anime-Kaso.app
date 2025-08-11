@@ -20,6 +20,7 @@ export function useAnimeList(page: number, pageName: string) {
                     break;
                 case '/thai':
                     endpoint = `${baseUrl}/anime?filter=airing&order_by=title&sort=asc&page=${page}&limit=25`;
+
                     break;
                 case '/animehentai':
                     endpoint = `${baseUrl}/anime?sfw=false&rating=rx&page=${page}&limit=25`;
@@ -32,7 +33,6 @@ export function useAnimeList(page: number, pageName: string) {
                     break;
                 case '/end':
                     endpoint = `${baseUrl}/anime?page=${page}&limit=25&order_by=members&sort=desc`;
-                    console.log('Endpoint for end:', endpoint);
                     break;
                 default:
                     throw new Error('Invalid page name');
