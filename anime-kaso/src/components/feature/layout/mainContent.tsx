@@ -28,7 +28,7 @@ export default function MainContent() {
                 {isLoading? <Skeleton width="w-[350px]" height="h-[75px]" rounded="rounded-md" key='loadingTitle' /> : <TitleContent title="อนิเมะล่าสุด" />}
             </ContainerTitle>
             <ContainerAnime>            
-                {isLoading? <Skeleton width="w-full" height="h-[725px]" rounded="rounded-lg" key='loadingAnimeList' /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                {isLoading? <Skeleton width="w-full" height="h-[725px]" rounded="rounded-lg" key='loadingAnimeList' /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
             </ContainerAnime>
             {isLoading? <Skeleton width="w-[150px]" height="h-[25px]" rounded="rounded-md" key='loadingPagination' /> : <Pagination />}
 
