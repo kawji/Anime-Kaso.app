@@ -2,19 +2,23 @@
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import { useState } from "react";
+import { mapPath } from "@/config/mapPath";
+import { usePathname } from "next/navigation";
 
 type Props = {
     page:number;
     pageCurrent:number;
     content: number | string;
 }
+type MapPathName = keyof typeof mapPath;
 
 export default function ButtonPagination({ page ,pageCurrent ,content }:Props) {
     const router = useRouter();
     const [show ,setShow] = useState(true);
-
+    const pathname = usePathname();
+    const name = pathname as MapPathName;
     const gotoPage = () => {
-        router.push(`/anime?page=${page}`);
+        router.push(`${name}?page=${page}`);
     }
 
 
