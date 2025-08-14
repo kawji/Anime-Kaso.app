@@ -1,4 +1,4 @@
-const mapPath = {
+export const mapPath = {
   '/': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`,
 
