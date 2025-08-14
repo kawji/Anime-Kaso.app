@@ -18,7 +18,7 @@ export default function Pagination() {
             {page>6 &&<ButtonShort />}
 
             <div className="flex items-center justify-center gap-4 h-full " >
-                {pageList.map((item)=><ButtonPagination page={item} pageCurrent={page} key={item} content={item} /> )}
+                {pageList.map((item) => <ButtonPagination page={item} pageCurrent={page} key={item} content={item} /> )}
             </div>   
 
             {page < pageLast - 5 &&  <ButtonShort /> }
