@@ -3,15 +3,20 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useLastPagination } from "@/hooks/useLastPagination";
 import { viewPort } from "@/utils/viewport";
+import { mapPath } from "@/config/mapPath";
+import { usePathname } from "next/navigation";
+
+type MapPathKey = keyof typeof mapPath;
 
 export function usePagination() {
         const searchParams = useSearchParams();
-        const [page ,setPage] = useState(1);
-        const { data ,isLoading ,isError } = useLastPagination(`https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`);
+        const [page ,setPage] = useState<number>(1);
+        const pathname = usePathname();
+        const name = pathname as MapPathKey;
+        const { data ,isLoading ,isError } = useLastPagination(mapPath[name](page));
         const pageLast = data?.pagination?.last_visible_page ?? 1
-
-        const { oneMachine } = viewPort();
-
+        // const { oneMachine } = viewPort();
+        console.log('ชื่อ path ------------> ',name )
 
         useEffect(() => {
             setPage(Number(searchParams.get('page') || 1))
