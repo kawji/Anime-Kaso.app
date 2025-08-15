@@ -37,10 +37,10 @@ export default function CarouselAnime() {
                 <AnimatePresence>
                     <motion.div
                     key={index}
-                    initial={{ x:valueAnimate > 0 ? 1000:-1000 ,y:0 ,opacity:0  }}
-                    animate={{x:0 ,y:0,opacity:1}}
-                    exit={{ x:valueAnimate > 0 ? -1200:1200,y:0 ,opacity:0.7 ,scale:0.8 }}
-                    transition={{duration:2 ,ease: "easeInOut"}}
+                    initial={{ opacity:0  }}
+                    animate={{opacity:1}}
+                    exit={{ opacity:0  }}
+                    transition={{duration:0.5 ,ease: "easeInOut"}}
                     className="absolute w-full h-full"
                     >
                         <SlideCarousel title={guideAnimeMenu[index].title} subtitles={guideAnimeMenu[index].subtitle} chapter={guideAnimeMenu[index].chapter} path={guideAnimeMenu[index].path} />
