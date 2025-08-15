@@ -1,8 +1,5 @@
-'use client'
-import { useParams } from "next/navigation";
-import { useEffect } from "react";
-import Detail from "@/components/feature/layout-detail/detail";
 
+import Anime from "@/components/feature/layout-detail/anime";
 type AnimeProps = {
   params: {
     id:string
@@ -10,11 +7,11 @@ type AnimeProps = {
 }
 
 export default function AnimeAll({params}:AnimeProps ) {
-    const { id } = params;
+    const id  = params.id;
 
     return (
     <div className="mt-10 sm:mt-16 font-sans min-h-screen pb-20 flex overflow-x-hidden text-white bg-black/50  flex-col " >
-      <Detail id={id ?? '' }  />
+      <Anime id={id ?? '' }  />
 
 
     </div>
