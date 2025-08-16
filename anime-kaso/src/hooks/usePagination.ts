@@ -2,7 +2,6 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useLastPagination } from "@/hooks/useLastPagination";
-import { viewPort } from "@/utils/viewport";
 import { mapPath } from "@/config/mapPath";
 import { usePathname } from "next/navigation";
 
