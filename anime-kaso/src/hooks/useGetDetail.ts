@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-
-
 export function useGetDetail(id: number | string) {
     return useQuery({
         queryKey: ['animeDetail', id],
