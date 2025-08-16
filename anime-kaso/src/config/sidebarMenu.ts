@@ -3,7 +3,7 @@ export const sidebarMenu = [
     {section:'อนิเมะทั้งหมด', path:'/anime'},
     {section:'กำลังฉาย', path:'/show'},
     {section:'ยังไม่ฉาย', path:'/noshow'},
-    {section:'อนิเมะไม่ลามุก', path:'/animehentai'},
+    {section:'อนิเมะไม่ 18+', path:'/animeNoHentei'},
     {section:'อนิเมะ - Hentai', path:'/animehentai'},
     {section:'อนิเมะ - Movie', path:'/animemovie'},
     {section:'ยังไม่จบ', path:'/noend'},
