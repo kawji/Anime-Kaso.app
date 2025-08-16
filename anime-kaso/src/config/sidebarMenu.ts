@@ -1,8 +1,9 @@
 export const sidebarMenu = [
     {section:'หน้าแรก', path:'/'},
     {section:'อนิเมะทั้งหมด', path:'/anime'},
-    {section:'ซับไทย', path:'/subthai'},
-    {section:'พากย์ไทย', path:'/thai'},
+    {section:'กำลังฉาย', path:'/show'},
+    {section:'ยังไม่ฉาย', path:'/noshow'},
+    {section:'อนิเมะไม่ลามุก', path:'/animehentai'},
     {section:'อนิเมะ - Hentai', path:'/animehentai'},
     {section:'อนิเมะ - Movie', path:'/animemovie'},
     {section:'ยังไม่จบ', path:'/noend'},
