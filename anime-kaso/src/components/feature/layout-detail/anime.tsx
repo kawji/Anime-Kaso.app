@@ -22,7 +22,7 @@ export default function Anime({id}:DetailProps) {
     return(
         <div className="flex m-[40px]  mt-15 w-full h-auto bg-blue-950/0 gap-15 ">
             <ImageAnime png='/anime-test.jpg' />
-            <DetailAnime title={data?.title?? 'Anime Loading....'} sub_title={''} discliption={''}  />
+            <DetailAnime title={data?.title?? 'Anime Loading....'}   />
 
         </div>
     );
