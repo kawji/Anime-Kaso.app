@@ -12,7 +12,7 @@ export const mapPath = {
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`, // ยังไม่มี tag สำหรับเสียงไทยใน Jikan
 
   '/animeNoHentei': (page: number) =>
-    `https://api.jikan.moe/v4/anime?sfw=true&status=airing&page=${page}&limit=25`, // อาจใช้ SFW filter ถ้ามี subtitle
+    `https://api.jikan.moe/v4/anime?sfw=true&page=${page}&limit=25`, // อาจใช้ SFW filter ถ้ามี subtitle
 
   '/animehentai': (page: number) =>
     `https://api.jikan.moe/v4/anime?genres=12&order_by=start_date&sort=desc&page=${page}&limit=25`, // Hentai genre ID = 12
