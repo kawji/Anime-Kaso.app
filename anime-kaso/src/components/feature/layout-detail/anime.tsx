@@ -1,23 +1,13 @@
 'use client'
-import { useEffect } from "react";
 import { useGetDetail } from "@/hooks/useGetDetail";
-import { Tv } from 'lucide-react';
 import ImageAnime from "@/components/ui/detail-anime/imageAnime";
 import DetailAnime from "@/components/ui/detail-anime/detail";
-import {use} from 'react'
 type DetailProps = {
-
-    id:string;
-   
+    id:string | number ;
 }
 export default function Anime({id}:DetailProps) {
-
-    const { data, isLoading ,isError } = useGetDetail(id);
-    useEffect(() => {
-        if (data) {
-            console.log(data);
-        }
-    },[data]);
+    const NumberId:number = Number(id);
+        const { data, isLoading ,isError } = useGetDetail(NumberId);
 
     return(
         <div className="flex p-[40px]  mt-15 w-full h-auto bg-blue-950/0 gap-15 ">
