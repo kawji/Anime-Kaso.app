@@ -6,8 +6,7 @@ export function useGetDetail(id: number | string) {
         queryKey: ['animeDetail', id],
         enabled: !!id,
         queryFn: async () => {
-            const num = Number(id);
-            const { data } = await axios.get(`https://api.jikan.moe/v4/anime/${num}`);
+            const { data } = await axios.get(`https://api.jikan.moe/v4/anime/${id}`);
             return data.data;
         },
         staleTime: 1000 * 60 * 5,
