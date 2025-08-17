@@ -1,8 +1,8 @@
 
 import Anime from "@/components/feature/layout-detail/anime";
 import Watch from "@/components/feature/layout-detail/watch";
-import CarouselScroll from "@/components/ui/detail-anime/carousel";
 import Recommend from "@/components/feature/layout-detail/recommend";
+import Footer from "@/components/feature/layout-detail/footer";
 
 type AnimeProps = {
   params: Promise<{
@@ -18,11 +18,11 @@ export default async function AnimeAllDetail(props:AnimeProps) {
         return <div>Invalid Anime ID</div>; // หรือ redirect, notFound() ก็ได้
   }else {
     return (
-      <div className="mt-5 sm:mt-7 font-sans min-h-screen pb-20 flex overflow-x-hidden text-white bg-black/50  flex-col " >
+      <div className="mt-5 sm:mt-7 font-sans min-h-screen pb-60 flex overflow-x-hidden text-white bg-black/50  flex-col" >
         <Anime id={params.id==='' ? Number('52480'):params.id}  />
         <Watch />
         <Recommend />
-    
+        <Footer />
       </div>
     ); 
   }
