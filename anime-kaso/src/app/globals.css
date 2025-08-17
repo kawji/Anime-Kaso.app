@@ -54,3 +54,4 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* สำหรับ Chrome, Safari */
 }
+
