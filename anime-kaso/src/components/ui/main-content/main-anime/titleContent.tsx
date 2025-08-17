@@ -4,8 +4,12 @@ type Props = {
 
 export default function TitleContent({ title }:Props ) {
     return(
-        <h3 className="text-2xl lg:text-4xl text-white/90 font-semibold  tracking-wider ">
-            {title}
-        </h3>
+        <div className="mt-2 flex flex-col gap-5 items-start">
+            <h3 className="text-2xl lg:text-4xl text-white/90 font-semibold  tracking-wider ">
+                {title}
+            </h3>
+            <p className="text-[18px] text-white/70 font-light tracking-wide ">รายการอนิเมะที่เเนะนำ</p>
+        </div>
+
     );
 }
