@@ -10,7 +10,7 @@ import { TypeAnime } from "@/type/TypeAnime";
 
 export default function Sidebar() {
     let namePath = usePathname();
-    const { data:animeList ,isLoading ,isError} = useAnimePopula();
+    const { data:animeList ,isLoading ,isError} = useAnimePopula(10);
 
     return(
         <aside  className="flex flex-col gap-15 left-0 shrink-0 shadow-sm shadow-white/30 rounded-br-2xl sm:w-[260px] pt-[var(--start-top)] pl-[var(--start-left)] min-h-screen bg-[#131313] relative z-99 ">
