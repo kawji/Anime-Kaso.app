@@ -1,7 +1,7 @@
 
 import { useRef ,useEffect } from "react";
 
-export default function useAutoplayCarousel( next:()=>void ,index:number ,delay=8000 ) {
+export default function useAutoplayCarousel( next:()=>void ,index:number ,delay=3600 ) {
     const timeoutRef = useRef< NodeJS.Timeout | null >(null)
 
     const resetTime = () => {
