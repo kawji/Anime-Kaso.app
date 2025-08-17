@@ -1,4 +1,4 @@
-import CarouselScroll from "@/components/ui/detail-anime/carousel";
+import CarouselScroll from "@/components/ui/detail-anime/animePopList";
 
 export default function Recommend() {
     return(
