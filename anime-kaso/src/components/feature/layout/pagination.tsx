@@ -8,7 +8,7 @@ export default function Pagination() {
     const {page  ,pageLast ,pageList ,isLoadingLast} = usePagination()
     
     return(
-        <nav className="max-w-[70vw] ml-0 w-[88%] h-auto lg:h-15 gap-4 bg-[#161515] border-white/25 border flex items-center justify-center px-6 py-4 rounded-md  " >
+        <nav className="max-w-[70vw] ml-0 mt-8 w-[88%] h-auto lg:h-15 gap-4 bg-[#161515] border-white/25 border flex items-center justify-center px-6 py-4 rounded-md  " >
             { page > 1 && <ButtonPagination page={page-1} pageCurrent={page} content={'Prev'} key='prevPage' /> }
             {page > 5 && 
             <span className="flex justify-center items-center ">
