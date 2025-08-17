@@ -1,6 +1,9 @@
 
 import Anime from "@/components/feature/layout-detail/anime";
 import Watch from "@/components/feature/layout-detail/watch";
+import CarouselScroll from "@/components/ui/detail-anime/carousel";
+
+
 type AnimeProps = {
   params: Promise<{
     id:string
@@ -18,6 +21,7 @@ export default async function AnimeAllDetail(props:AnimeProps) {
       <div className="mt-5 sm:mt-7 font-sans min-h-screen pb-20 flex overflow-x-hidden text-white bg-black/50  flex-col " >
         <Anime id={params.id==='' ? Number('52480'):params.id}  />
         <Watch />
+        <CarouselScroll />
     
       </div>
     ); 
