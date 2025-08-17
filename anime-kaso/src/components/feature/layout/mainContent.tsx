@@ -23,7 +23,7 @@ export default function MainContent() {
 
 
     return(
-        <main className="flex flex-col items-center flex-1 gap-0 lg:gap-5 w-full minh-h-screen pt-10 sm:pt-16 bg-[#101010] ">
+        <main className="flex flex-col items-center flex-1 gap-0 lg:gap-6 w-full minh-h-screen pt-10 sm:pt-16 bg-[#101010] ">
             { pageName==='/'&& <CarouselAnime />}
             <ContainerTitle >
                 {isLoading? <Skeleton width="w-[350px]" height="h-[75px]" rounded="rounded-md" key='loadingTitle' /> : <TitleContent title="อนิเมะล่าสุด" />}
