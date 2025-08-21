@@ -7,11 +7,12 @@ type DetailProps = {
 }
 export default function Anime({id}:DetailProps) {
     const NumberId:number = Number(id);
-        const { data, isLoading ,isError } = useGetDetail(NumberId);
+    const { data, isLoading ,isError } = useGetDetail(NumberId);
+    console.log('Data ---------====>',data)
 
     return(
         <div className="flex p-[40px]  mt-15 w-full h-auto bg-blue-950/0 gap-15 ">
-            <ImageAnime png='/anime-test.jpg' />
+            <ImageAnime png={data?.images.jpg.image_url?? ''} />
             <DetailAnime title={data?.title?? 'Anime Loading....'}   />
 
         </div>
