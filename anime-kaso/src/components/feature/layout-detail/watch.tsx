@@ -1,16 +1,33 @@
 import IconWatch from "@/components/ui/detail-anime/iconWatch";
+import clsx from "clsx";
 import YouTube from "@/components/ui/icons/youTube";
+import { AnimeData } from "@/config/animeData";
+import { mapPlatform } from "@/config/mapPlatformList";
+import { recordPlatform } from "@/config/mapPlatformList";
+import { KeyPlatformList } from "@/config/mapPlatformList";
+
+
+
 import Netflix from "@/components/ui/icons/netflix";
+type PropsWatch = {
+    id :string | number;
+}
 
+export default function Watch({ id }:PropsWatch) {
+    const numberId = Number(id);
+    const keyPlatform:KeyPlatformList[] = AnimeData[numberId]?.platformList || [] ;
+    const platformList = keyPlatform.map( (k) => mapPlatform[k] )
 
-export default function Watch() {
+    console.log("plat form --->",platformList)
     return(
         <div className="w-full h-auto flex flex-col bg-blue-800/0 p-[40px] gap-5 ">
             <h1 className="flex items-center justify-start text-[26px] font-bold ">ช่องทางการรับชม</h1>
             <div className="flex items-center w-full h-auto py-5 pr-5  " > 
-                <div className="flex p-0 bg-white/0 gap-5 w-full h-auto  ">
-                    <IconWatch tagIcon={<YouTube />} name="YouTube" />
-                    <IconWatch tagIcon={<Netflix />} name="Netflix" />
+                <div className={clsx("flex p-0 bg-white/0 gap-5 w-full h-auto " ,platformList.length > 0 ? '' : 'justify-center items-center')} >
+                {platformList.length > 0 ?  platformList?.map((platform) => <IconWatch tagIcon={<platform.pathname />} name={platform.name} />) : <h2 className="text-white/75 text-lg font-light leading-relaxed tracking-wide ">ไม่พบช่องทางการรับชม</h2>  }
+
+
+
 
 
 {/* 
