@@ -4,6 +4,7 @@ import AmazonPrimeVideo from "@/components/ui/icons/amazonPrimeVideo";
 import Bilibili from "@/components/ui/icons/bilibili";
 import Crunchyroll from "@/components/ui/icons/crunchyroll";
 import Funimation from "@/components/ui/icons/funimation";
+import Iq from "@/components/ui/icons/iq";
 import { JSX } from "react";
 
 
@@ -21,6 +22,8 @@ export const mapPlatform:recordPlatform = {
     bilibili: { pathname:Bilibili ,name:'Bilibili' },
     crunchyroll: { pathname:Crunchyroll ,name:'Crunchyroll' },
     funimation: { pathname:Funimation ,name:'Funimation' },
+    iqiy: { pathname:Iq ,name:'iQIYI' },
+
 } as const;
 
 export type KeyPlatformList = keyof typeof mapPlatform
