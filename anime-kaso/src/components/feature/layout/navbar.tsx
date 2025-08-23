@@ -1,5 +1,5 @@
-import Logo from "@/components/ui/Navbar/logo";
-import SearchAnime from "@/components/ui/Navbar/search";
+import Logo from "@/components/ui/navbar/logo";
+import SearchAnime from "@/components/ui/navbar/search";
 
 export default function Navbar() {
     return(
