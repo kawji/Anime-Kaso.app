@@ -20,19 +20,25 @@ export default function MainContent() {
 
     const {data: animeList, isLoading, isError } = useAnimeList(mapPath[name](pageNumber));
 
-
+    console.log('ISSSSSSSS LOADINF __>',isLoading)
 
     return(
-        <main className="flex flex-col items-center flex-1 gap-0 lg:gap-6 w-full minh-h-screen pt-10 sm:pt-16 bg-[#101010] ">
-            { pageName==='/'&& <CarouselAnime />}
+        <main className="flex flex-col items-center flex-1 gap-0 lg:gap-6 w-full min-h-screen  pt-10 sm:pt-16 bg-[#101010] ">
+            <CarouselAnime />
             <ContainerTitle >
-                {isLoading? <Skeleton width="w-[350px]" height="h-[75px]" rounded="rounded-md" key='loadingTitle' /> : <TitleContent title="อนิเมะล่าสุด" />}
+                {isLoading? 
+                <div className="flex flex-col gap-5 items-start">
+                <Skeleton width="w-[350px]" height="h-[45px]" rounded="rounded-md" key='loadingTitle' />
+                <Skeleton width="w-[150px]" height="h-[35px]" rounded="rounded-md" key='loadingTitle' />
+
+                </div> : <TitleContent title="อนิเมะล่าสุด" />}
             </ContainerTitle>
             <ContainerAnime>            
-                {isLoading? <Skeleton width="w-full" height="h-[725px]" rounded="rounded-lg" key='loadingAnimeList' /> : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                {isLoading? Array.from({length:25}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i}`} />) : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
             </ContainerAnime>
             {isLoading? <Skeleton width="w-[150px]" height="h-[25px]" rounded="rounded-md" key='loadingPagination' /> : <Pagination />}
-
+        
+        
         </main>
     );
 }
