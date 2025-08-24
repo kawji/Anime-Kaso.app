@@ -11,13 +11,10 @@ type Props = {
 export default function CardAnime({ id ,png ,title ,favorites }:Props) {
     const [isLoading ,setIsLoading] = useState(true);
 
-
-
-
     return(
         <Link href={`/anime/${id}`} className="p-[2px] hover:ring-2 flex flex-1 grow shrink-1 min-h-[250px] min-w-[170px] max-w-[200px] w-full mx-auto rounded-lg overflow-hidden relative hover:shadow-2xl hover:shadow-[#232323)] group transition-all cursor-pointer" >
             <article >
-                <figure className="aspect-[3/4]  overflow-hidden rounded-lg flex items-center justify-center relative " >
+                <figure className="aspect-[3/4] h-full  overflow-hidden rounded-lg flex items-center justify-center relative " >
                     {isLoading && <Spinner position="absolute z-10 " />}
                     <img src={png}
                     className="flex opacity-90 object-cover rounded-lg w-full h-full hover:opacity-100 hover:scale-104 transition-all duration-500 ease-in-out " 
