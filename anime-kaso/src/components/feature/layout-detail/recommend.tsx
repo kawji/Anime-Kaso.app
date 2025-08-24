@@ -1,4 +1,4 @@
-import CarouselScroll from "@/components/ui/detail-anime/carouselScore";
+import CarouselScroll from "@/components/ui/system/carouselScore";
 import getRandomArray from "@/utils/randomArray";
 import getNumberRandom from "@/utils/numberRandom";
 
