@@ -7,7 +7,7 @@ type PropsLogo = {
 
 export default function Logo({text}:PropsLogo) {
     return(
-        <Link href='/' className="flex items-center p-0">
+        <Link href='/' className="flex items-center p-0 shrink-0">
             <span className={clsx(" font-bold ",text? text:'text-3xl')}>
                 Anime&nbsp;-&nbsp;
             </span>
