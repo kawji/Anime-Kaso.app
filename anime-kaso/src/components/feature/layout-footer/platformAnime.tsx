@@ -10,7 +10,7 @@ import YouTube2 from "@/components/ui/platform/youtube";
 
 export default function PlatformAnime() {
     return(
-        <>
+        <div className="flex flex-col w-full items-center lg:gap-4">
             <h1 className="flex w-full leading-relaxed text-2xl text-white items-center justify-center font-medium tracking-normal ">อนิเมะถูกลิขสิทธิ์มากมาย</h1>
             <h1 className="flex w-full leading-relaxed text-[18px] text-white/70 items-center justify-center font-light tracking-wider ">รองรับแพลตฟอร์มต่างๆมากมายให้รับชม</h1>
             <div className="mt-5 flex justify-center items-center w-full h-auto bg-black/0 ">
@@ -25,6 +25,6 @@ export default function PlatformAnime() {
                     <YouTube2 />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
