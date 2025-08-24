@@ -1,6 +1,6 @@
 
-import Sidebar from "@/components/feature/layout/sidebar";
-import MainContent from "@/components/feature/layout/mainContent";
+import Sidebar from "@/components/feature/layout-main/sidebar";
+import MainContent from "@/components/feature/layout-main/mainContent";
 
 export default function AnimeAll() {
   return (
