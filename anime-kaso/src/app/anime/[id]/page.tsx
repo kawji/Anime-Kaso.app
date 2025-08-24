@@ -2,7 +2,7 @@
 import Anime from "@/components/feature/layout-detail/anime";
 import Watch from "@/components/feature/layout-detail/watch";
 import Recommend from "@/components/feature/layout-detail/recommend";
-import Footer from "@/components/feature/layout-detail/footer";
+import Footer from "@/components/feature/layout-footer/footer";
 import Iq from "@/components/ui/icons/iq";
 
 type AnimeProps = {
