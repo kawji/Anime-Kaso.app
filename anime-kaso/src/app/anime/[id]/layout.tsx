@@ -1,6 +1,6 @@
 'use client'
 import "@/app/globals.css";
-import Navbar from "@/components/feature/layout/navbar";
+import Navbar from "@/components/feature/layout-main/navbar";
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useState } from "react";
