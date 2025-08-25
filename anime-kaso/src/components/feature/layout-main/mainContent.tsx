@@ -27,9 +27,9 @@ export default function MainContent() {
             <CarouselAnime />
             <ContainerTitle >
                 {isLoading? 
-                <div className="flex flex-col gap-5 items-start">
-                <Skeleton width="w-[350px]" height="h-[45px]" rounded="rounded-md" key='loadingTitle' />
-                <Skeleton width="w-[150px]" height="h-[35px]" rounded="rounded-md" key='loadingTitle' />
+                <div className="flex flex-col gap-3 items-start">
+                <Skeleton width="w-[350px]" height="h-[43px]" rounded="rounded-md" key='loadingTitle' />
+                <Skeleton width="w-[150px]" height="h-[30px]" rounded="rounded-md" key='loadingsubTitle' />
 
                 </div> : <TitleContent title="อนิเมะล่าสุด" />}
             </ContainerTitle>
