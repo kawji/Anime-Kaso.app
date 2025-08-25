@@ -5,7 +5,7 @@ type Props = {
 
 export default function ContainerAnime({ children }:Props ) {
     return(
-        <article className="mt-3 max-w-[70vw] lg:min-h-50 w-[88%] ml-[0px]  h-auto flex flex-wrap lg:gap-4 gap-2 " >
+        <article className="mt-3 max-w-[70vw] w-[88%] ml-0 h-auto grid grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-2 lg:gap-4" >
             {children}
         </article>
     );
