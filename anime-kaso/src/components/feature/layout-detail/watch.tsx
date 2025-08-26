@@ -20,18 +20,12 @@ export default function Watch({ id }:PropsWatch) {
 
     console.log("plat form --->",platformList)
     return(
-        <div className="w-full h-auto flex flex-col bg-blue-800/0 p-[40px] gap-5 ">
-            <h1 className="flex items-center justify-start text-[26px] font-bold ">ช่องทางการรับชม</h1>
-            <div className="flex items-center w-full h-auto py-5 pr-5  " > 
-                <div className={clsx("flex p-0 bg-white/0 gap-5 w-full h-auto lg:max-h-[150px] " ,platformList.length > 0 ? '' : 'justify-center items-center')} >
+        <div className="w-full h-auto flex flex-col bg-blue-800/0 pl-[40px] pt-[40px] gap-5 ">
+            <h1 className="flex items-center justify-start text-2xl md:text-[26px] font-bold ">ช่องทางการรับชม</h1>
+            <div className="relative w-full h-auto py-5 overflow-hidden " > 
+                <div className={clsx("flex p-0 gap-5 w-full h-auto max-h-[100px] lg:max-h-[150px] overflow-x-auto scrollbar-hide " ,platformList.length > 0 ? '' : 'justify-center items-center')} >
                 {platformList.length > 0 ?  platformList?.map((platform) => <IconWatch tagIcon={<platform.pathname />} name={platform.name} />) : <h2 className="text-white/75 text-lg font-light leading-relaxed tracking-wide ">ไม่พบช่องทางการรับชม</h2>  }
-
-
-
-
-
-{/* 
-                    <span className="shrink-0 p-5 bg-white/7 cursor-pointer hover:bg-white/15 transition-colors hover:opacity-85 "><YouTube /></span> */}
+                <div className=" pointer-events-none absolute right-0 top-0 h-full w-18 bg-gradient-to-l from-black to-transparent z-10" />
 
                 </div>
 
