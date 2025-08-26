@@ -12,7 +12,7 @@ export default function CardAnime({ id ,png ,title ,favorites }:Props) {
     const [isLoading ,setIsLoading] = useState(true);
 
     return(
-        <Link href={`/anime/${id}`} className="p-[2px] hover:ring-2 flex flex-1 grow shrink-1 min-h-[255px] min-w-[170px] max-w-[200px] w-full mx-auto rounded-lg overflow-hidden relative hover:shadow-2xl hover:shadow-[#232323)] group transition-all cursor-pointer" >
+        <Link href={`/anime/${id}`} className="p-[2px] hover:ring-2 flex flex-1 grow shrink-1 h-auto min-w-[140px] sm:min-h-[255px] sm:min-w-[170px] sm:max-w-[200px] w-full mx-auto rounded-lg overflow-hidden relative hover:shadow-2xl hover:shadow-[#232323)] group transition-all cursor-pointer" >
             <article >
                 <figure className="aspect-[3/4] h-full  overflow-hidden rounded-lg flex items-center justify-center relative " >
                     {isLoading && <Spinner position="absolute z-10 " />}
