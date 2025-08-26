@@ -23,7 +23,7 @@ export default function MainContent() {
     console.log('ISSSSSSSS LOADINF __>',isLoading)
 
     return(
-        <main className="flex flex-col items-center flex-1 gap-0 lg:gap-6 w-full min-h-screen  pt-10 sm:pt-16 bg-[#101010] ">
+        <main className="flex flex-col items-center flex-1 gap-4 lg:gap-6 w-full min-h-screen pt-10 sm:pt-16 bg-[#101010] ">
             <CarouselAnime />
             <ContainerTitle >
                 {isLoading? 
