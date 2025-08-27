@@ -3,12 +3,17 @@ import ButtonPagination from "@/components/ui/pagination/buttonPagi";
 import { ButtonShort } from "@/components/ui/pagination/buttonShort";
 import { usePagination } from "@/hooks/usePagination";
 import { Skeleton } from "@/components/ui/system/skeleton";
+import { viewPort } from "@/utils/viewport";
+import clsx from "clsx";
 
 export default function Pagination() {
     const {page  ,pageLast ,pageList ,isLoadingLast} = usePagination()
-    
+    const { oneMachine } = viewPort()
+    const view = oneMachine()
+
+
     return(
-        <nav className="max-w-[70vw] ml-0 mt-8 w-[88%] h-auto lg:h-15 gap-4 bg-[#161515] border-white/25 border flex items-center justify-center px-6 py-4 rounded-md  " >
+        <nav className={clsx("lg:max-w-[70vw] lg:w-[88%] w-[95%] ml-0 mt-8 h-auto lg:h-15 bg-[#161515] border-white/25 border flex items-center justify-center px-6 py-4 rounded-md ", view?.desktop &&'gap-4' ,view?.tablet && 'gap-2' ,view?.phone && 'gap-0')} >
             { page > 1 && <ButtonPagination page={page-1} pageCurrent={page} content={'Prev'} key='prevPage' /> }
             {page > 5 && 
             <span className="flex justify-center items-center ">
