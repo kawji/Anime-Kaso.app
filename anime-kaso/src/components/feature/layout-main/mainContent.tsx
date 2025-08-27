@@ -11,16 +11,20 @@ import { TypeAnime } from "@/type/TypeAnime";
 import { usePathPagination } from "@/hooks/usePathPagination";
 import { Skeleton } from "@/components/ui/system/skeleton";
 import { mapPath } from "@/config/mapPath";
+import { sidebarMenu } from "@/config/sidebarMenu";
 
 type TypeMapPath = keyof typeof mapPath
 
 export default function MainContent() {
     const {pageNumber ,pageName} = usePathPagination()
     const name = pageName as TypeMapPath
+    const pageTitle = sidebarMenu.filter( (page) => page.path === pageName )
 
     const {data: animeList, isLoading, isError } = useAnimeList(mapPath[name](pageNumber));
 
-    console.log('ISSSSSSSS LOADINF __>',isLoading)
+    console.log('ISSSSSSSS Page name __>',pageName)
+    console.log('ISSSSSSSS Page Title __>',pageTitle)
+
 
     return(
         <main className="flex flex-col items-center flex-1 gap-4 lg:gap-6 w-full min-h-screen pt-10 sm:pt-16 bg-[#101010] ">
@@ -31,7 +35,7 @@ export default function MainContent() {
                 <Skeleton width="w-[350px]" height="h-[43px]" rounded="rounded-md" key='loadingTitle' />
                 <Skeleton width="w-[150px]" height="h-[30px]" rounded="rounded-md" key='loadingsubTitle' />
 
-                </div> : <TitleContent title="อนิเมะล่าสุด" />}
+                </div> : <TitleContent title={ pageTitle? pageTitle[0].title :"อนิเมะล่าสุด"} />}
             </ContainerTitle>
             <ContainerAnime>            
                 {isLoading? Array.from({length:25}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i}`} />) : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
