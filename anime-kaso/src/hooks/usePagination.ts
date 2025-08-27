@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLastPagination } from "@/hooks/useLastPagination";
 import { mapPath } from "@/config/mapPath";
 import { usePathname } from "next/navigation";
+import { viewPort } from "@/utils/viewport";
 
 type MapPathKey = keyof typeof mapPath;
 
@@ -14,16 +15,30 @@ export function usePagination() {
         const name = pathname as MapPathKey;
         const { data ,isLoading ,isError } = useLastPagination(mapPath[name](page));
         const pageLast = data?.pagination?.last_visible_page ?? 1
-        // const { oneMachine } = viewPort();
+        const { oneMachine } = viewPort();
+        const view = oneMachine() 
+
         console.log('ชื่อ path ------------> ',name )
+        console.log('View Port  ------------> ',view?.desktop )
+
 
         useEffect(() => {
             setPage(Number(searchParams.get('page') || 1))
         },[searchParams])
 
-        const pageList = [  page-3 ,page-2 ,page-1 ,page ,page+1 ,page+2 ,page+3 ,page+4   ].filter((p) => p >= 1 && p <= pageLast );
+        let pageList:number[] = []
+
+        if(view?.desktop) {
+            pageList = [  page-3 ,page-2 ,page-1 ,page ,page+1 ,page+2 ,page+3 ,page+4   ].filter((p) => p >= 1 && p <= pageLast );
+        }else if(view?.tablet) {    
+            pageList = [ page-2 ,page-1 ,page ,page+1 ,page+2  ].filter((p) => p >= 1 && p <= pageLast ); 
+        }else if(view?.phone) {
+            pageList = [ page-1 ,page ,page+1  ].filter((p) => p >= 1 && p <= pageLast );
+
+        }
 
 
+        
         return {page  ,pageLast ,pageList ,isLoadingLast:isLoading ,isErrorLast:isError }
 }
 
