@@ -19,11 +19,7 @@ export default function MainContent() {
     const {pageNumber ,pageName} = usePathPagination()
     const name = pageName as TypeMapPath
     const pageTitle = sidebarMenu.filter( (page) => page.path === pageName )
-
     const {data: animeList, isLoading, isError } = useAnimeList(mapPath[name](pageNumber));
-
-    console.log('ISSSSSSSS Page name __>',pageName)
-    console.log('ISSSSSSSS Page Title __>',pageTitle)
 
 
     return(
