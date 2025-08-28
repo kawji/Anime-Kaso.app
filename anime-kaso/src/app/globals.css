@@ -55,3 +55,21 @@ body {
   display: none;             /* สำหรับ Chrome, Safari */
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.animate-fade-in {
+  animation: fadeIn 500ms forwards ;
+}
+
+.animate-fade-out {
+  animation: fadeOut 500ms forwards ;
+}
+
+
