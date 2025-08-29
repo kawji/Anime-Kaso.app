@@ -47,7 +47,7 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
             <button className=" shrink-0 cursor-pointer hover:bg-white/85 transition-colors px-10 py-2.5 rounded-full bg-white text-black flex items-center gap-4 font-light lg:text-[17px] " >
                 <Tv /> รับชมตอนนี้
             </button>
-            <button className=" p-3 rounded-full hover:bg-white hover:text-black transition-all cursor-pointer  " onClick={copyToClipboard} >
+            <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer  " onClick={copyToClipboard} >
                 <Share2 />
             </button>
         </div>
