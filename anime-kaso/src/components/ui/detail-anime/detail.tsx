@@ -2,6 +2,8 @@ import clsx from "clsx";
 import { Tv } from "lucide-react";
 import { Share2 } from 'lucide-react';
 import { useState ,useRef, useEffect } from "react";
+import { Wrench } from 'lucide-react';
+
 
 type DetailProps = {
     title:string;
@@ -50,6 +52,10 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
             <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer  " onClick={copyToClipboard} >
                 <Share2 />
             </button>
+            <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer  "  >
+                <Wrench />
+            </button>
+            
         </div>
         <div>
             <p className="text-[15px] text-white/80 font-light mt-3 lg:mt-5 leading-7">
@@ -62,6 +68,17 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
         )}>
             คัดลอกลิ้งค์แชร์สำเร็จ
         </div>
+
+
+
+
+
+
+
+
+
+
+        
     
     </div>
     );
