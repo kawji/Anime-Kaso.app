@@ -1,7 +1,5 @@
 'use client'
 
-
-
 export default function ButtonCarousel() {
     return(
         <div className="p-8 flex justify-center items-end shrink-0 ">

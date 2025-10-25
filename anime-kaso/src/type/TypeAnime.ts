@@ -1,6 +1,3 @@
-
-
-
 export type TypeAnime = {
     mal_id:number;
     title: string;
@@ -11,9 +8,4 @@ export type TypeAnime = {
     };
     favorites: number;
     popularity: number;
-
-
-
-
-
 }

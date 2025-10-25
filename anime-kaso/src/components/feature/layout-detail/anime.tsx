@@ -15,8 +15,6 @@ export default function Anime({id}:DetailProps) {
     const { data, isLoading ,isError } = useGetDetail(numberId);
     const detail = AnimeData[numberId]
     
-    
-
     useEffect(()=> {
         if(detail) {
             console.log('Detallll------------> ',detail)

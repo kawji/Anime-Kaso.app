@@ -1,3 +1,6 @@
+
+
+// path for sidebar
 export const mapPath = {
   '/': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`,
@@ -6,7 +9,7 @@ export const mapPath = {
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`,
 
   '/show': (page: number) =>
-    `https://api.jikan.moe/v4/anime?status=airing&page=${page}&limit=25`, // อาจใช้ SFW filter ถ้ามี subtitle
+    `https://api.jikan.moe/v4/anime?status=airing&page=${page}&limit=25`, // อาจใช้ SFW filter(path ?) ถ้ามี subtitle
 
   '/noshow': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`, // ยังไม่มี tag สำหรับเสียงไทยใน Jikan

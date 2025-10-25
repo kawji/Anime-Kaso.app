@@ -6,7 +6,6 @@ import Crunchyroll from "@/components/ui/icons/crunchyroll";
 import Funimation from "@/components/ui/icons/funimation";
 import Iq from "@/components/ui/icons/iq";
 
-
 export type ObjPlatform = {
     pathname: React.ComponentType;
     name: string;

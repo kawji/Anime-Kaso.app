@@ -2,7 +2,6 @@
 // type
 import { guideAnimeDetailType } from "@/type/guideAnime";
 
-
 export default function DetailCarousel({ title ,subtitles ,chapter }:guideAnimeDetailType) {
     return(
         <section className="flex gap-5 flex-col flex-1 pl-8 py-5" >

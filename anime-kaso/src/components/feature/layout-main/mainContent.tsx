@@ -25,7 +25,7 @@ export default function MainContent() {
     return(
         <main className="flex flex-col items-center flex-1 gap-4 lg:gap-6 w-full min-h-screen pt-10 sm:pt-16 bg-[#101010] ">
             <CarouselAnime />
-            <ContainerTitle >
+            <ContainerTitle key={'con'} >
                 {isLoading? 
                 <div className="flex flex-col gap-3 items-start">
                 <Skeleton width="w-[350px]" height="h-[43px]" rounded="rounded-md" key='loadingTitle' />
@@ -34,7 +34,7 @@ export default function MainContent() {
                 </div> : <TitleContent title={ pageTitle? pageTitle[0].title :"อนิเมะล่าสุด"} />}
             </ContainerTitle>
             <ContainerAnime>            
-                {isLoading? Array.from({length:25}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i}`} />) : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                {isLoading? Array.from({length:25}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i+1}`} />) : animeList?.data.map((anime:TypeAnime) => <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
             </ContainerAnime>
             {isLoading? <Skeleton width="w-[150px]" height="h-[25px]" rounded="rounded-md" key='loadingPagination' /> : <Pagination />}
         

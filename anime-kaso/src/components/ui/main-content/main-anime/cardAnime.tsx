@@ -36,7 +36,6 @@ export default function CardAnime({ id ,png ,title ,favorites }:Props) {
 
 
 
-
 {/* <span className="rounded px-2 py-1 text-[white/75] bg-black/50 flex justify-center items-center hover:bg-white/7 hover:text-white/85 transition-all ">
 ผู้ชื่นชอบ&nbsp;{favorites}
 </span> */}

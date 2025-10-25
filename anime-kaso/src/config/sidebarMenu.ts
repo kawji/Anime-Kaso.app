@@ -1,4 +1,3 @@
-
 export const sidebarMenu = [
     {section:'หน้าแรก', path:'/' ,title:'อนิเมะล่าสุด'},
     {section:'อนิเมะทั้งหมด', path:'/anime' ,title:'อนิเมะทั้งหมด'},

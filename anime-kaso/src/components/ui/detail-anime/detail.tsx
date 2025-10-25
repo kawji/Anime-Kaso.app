@@ -24,7 +24,6 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
                 setFadeStatus('animate-fade-out')
             },2500)
 
-
         }).catch((err) => {
           alert("ไม่สามารถคัดลอกลิงก์ได้");
         });
@@ -33,8 +32,6 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
       useEffect(()=>{
         if(timeRef.current) clearTimeout(timeRef.current)
       },[])
-
-
 
     return(
         <div className="flex-1 shrink-0 md:pt-5 w-full max-w-[60vw] bg-black/0 flex flex-col gap-1.5 items-center md:items-start " >
