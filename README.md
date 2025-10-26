@@ -1,4 +1,4 @@
-# Anime - Kaso
+# Anime - Kaso.com
 
 โปรเจกต์ **Anime - Kaso.com** คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ (Anime Information)  
 โดยใช้ **[Jikan API](https://jikan.moe)** ในการดึงข้อมูลจาก **MyAnimeList** และเสริมด้วย **Custom Platform Info**  
