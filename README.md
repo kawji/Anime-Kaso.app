@@ -24,4 +24,4 @@ Clone โปรเจกต์นี้จาก GitHub:
 
 ```bash
 git clone https://github.com/your-username/anime-kaso.com.git
-cd anime-kaso.com
+cd anime-kaso
