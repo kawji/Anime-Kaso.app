@@ -1,6 +1,6 @@
-# Anime - Kaso.com
+# Anime - Kaso.app
 
-โปรเจกต์ **Anime - Kaso.com** คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ (Anime Information)  
+โปรเจกต์ **Anime - Kaso.app** คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ (Anime Information)  
 โดยใช้ **[Jikan API](https://jikan.moe)** ในการดึงข้อมูลจาก **MyAnimeList** และเสริมด้วย **Custom Platform Info**  
 เช่น Netflix, iQIYI, Bilibili, YouTube พร้อมข้อมูล **ซับไทย/พากย์ไทย**
 
