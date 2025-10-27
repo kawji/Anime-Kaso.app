@@ -2,9 +2,9 @@
 import { usePathname } from "next/navigation";
 import { sidebarMenu } from "@/config/sidebarMenu";
 // ui
-import ButtonSidebar from "@/components/ui/Sidebar/button";
-import TitleSidebar from "@/components/ui/Sidebar/title";
-import CardTopAnime from "@/components/ui/Sidebar/cardTopAnime";
+import ButtonSidebar from "@/components/ui/sidebar/button";
+import TitleSidebar from "@/components/ui/sidebar/title";
+import CardTopAnime from "@/components/ui/sidebar/cardTopAnime";
 import { useAnimePopula } from "@/hooks/useAnimePopula";
 import { TypeAnime } from "@/type/TypeAnime";
 
