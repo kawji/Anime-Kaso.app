@@ -1,6 +1,4 @@
 
-
-
 export default function SearchAnime() {
     return(
         <div className=" flex items-center gap-3 justify-end grow lg:px-20 sm:px-10 pl-5 ">
