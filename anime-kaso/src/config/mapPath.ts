@@ -1,5 +1,3 @@
-
-
 // path for sidebar
 export const mapPath = {
   '/': (page: number) =>

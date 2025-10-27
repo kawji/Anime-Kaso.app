@@ -11,4 +11,3 @@ export default function ContainerAnime({ children }:Props ) {
         </article>
     );
 }
-// p-8 bg-[#161515] shadow-white/30 border-white/20 border rounded-2xl

@@ -1,3 +1,4 @@
+'use client'
 import clsx from "clsx";
 import { Tv } from "lucide-react";
 import { Share2 } from 'lucide-react';
@@ -56,7 +57,7 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
         </div>
         <div>
             <p className="text-[15px] text-white/80 font-light mt-3 lg:mt-5 leading-7">
-                {discliption ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, tempora. Quisquam, doloremque. Voluptatum, repellendus. Quibusdam, asperiores. Doloribus, accusantium. Eaque, minima. Necessitatibus, explicabo. Ratione, delectus. Quasi, fugit. Voluptates, distinctio. Nihil, pariatur.'}
+                {discliption ?? 'ไม่พบเรื่องย่อ'}
             </p>
         </div>
         

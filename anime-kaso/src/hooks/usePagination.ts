@@ -1,4 +1,3 @@
-'use client'
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useLastPagination } from "@/hooks/useLastPagination";
@@ -17,10 +16,6 @@ export function usePagination() {
         const pageLast = data?.pagination?.last_visible_page ?? 1
         const { oneMachine } = viewPort();
         const view = oneMachine() 
-
-        console.log('ชื่อ path ------------> ',name )
-        console.log('View Port  ------------> ',view?.desktop )
-
 
         useEffect(() => {
             setPage(Number(searchParams.get('page') || 1))

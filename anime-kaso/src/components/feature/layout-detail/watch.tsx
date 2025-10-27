@@ -1,14 +1,9 @@
 import IconWatch from "@/components/ui/detail-anime/iconWatch";
 import clsx from "clsx";
-import YouTube from "@/components/ui/icons/youTube";
 import { AnimeData } from "@/config/animeData";
 import { mapPlatform } from "@/config/mapPlatformList";
-import { recordPlatform } from "@/config/mapPlatformList";
 import { KeyPlatformList } from "@/config/mapPlatformList";
 
-
-
-import Netflix from "@/components/ui/icons/netflix";
 type PropsWatch = {
     id :string | number;
 }

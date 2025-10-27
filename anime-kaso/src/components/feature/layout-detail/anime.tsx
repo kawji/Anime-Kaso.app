@@ -3,8 +3,7 @@ import { useGetDetail } from "@/hooks/useGetDetail";
 import ImageAnime from "@/components/ui/detail-anime/imageAnime";
 import DetailAnime from "@/components/ui/detail-anime/detail";
 import { AnimeData } from "@/config/animeData";
-import { useEffect } from "react";
-import { TypeDataAnime } from "@/config/animeData";
+
 
 
 type DetailProps = {
@@ -14,12 +13,6 @@ export default function Anime({id}:DetailProps) {
     const numberId:number = Number(id);
     const { data, isLoading ,isError } = useGetDetail(numberId);
     const detail = AnimeData[numberId]
-    
-    useEffect(()=> {
-        if(detail) {
-            console.log('Detallll------------> ',detail)
-        }
-    },[detail])
 
     return(
         <div className="md:flex-row flex flex-col items-center p-[40px] mt-7 md:mt-15 w-full h-auto bg-blue-950/0 gap-7 md:gap-15 ">

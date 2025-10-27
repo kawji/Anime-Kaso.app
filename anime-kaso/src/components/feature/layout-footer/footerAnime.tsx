@@ -1,6 +1,5 @@
 import Logo from "@/components/ui/navbar/logo";
 
-
 export default function FooterAnime() {
     return(
         <div className="w-full h-auto bg-black flex flex-col items-center py-8 px-8 gap-20 ">

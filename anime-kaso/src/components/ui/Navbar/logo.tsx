@@ -12,7 +12,7 @@ export default function Logo({text}:PropsLogo) {
                 Anime&nbsp;-&nbsp;
             </span>
             <span className={clsx("text-[var(--primary-text)] font-bold ",text? text:'lg:text-3xl sm:text-2xl text-[16px] ')}  >
-                Kaso.com
+                Kaso.app
             </span>
         </Link>
     );

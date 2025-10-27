@@ -6,8 +6,6 @@ import { guideAnimeMenu } from "@/config/guideAnimeMenu";
 import { AnimatePresence ,motion } from "motion/react";
 // icons
 import { ArrowBigLeftDash ,ArrowBigRightDash } from "lucide-react";
-import { v4 as uuidv4 } from 'uuid';
-
 
 export default function CarouselAnime() {
     const [index,setIndex] = useState(0);
