@@ -1,4 +1,4 @@
-import Logo from "@/components/ui/navbar/logo";
+import Logo from "@/components/ui/navbar/logo"
 
 export default function FooterAnime() {
     return(
