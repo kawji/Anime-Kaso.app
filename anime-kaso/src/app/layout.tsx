@@ -1,10 +1,20 @@
-'use client';
 
 import './globals.css';
 import Navbar from '@/components/feature/layout-main/navbar';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useState } from 'react';
 import { Noto_Sans_Thai, Noto_Sans } from 'next/font/google'
+import RootProvider from './RootProvider';
+
+
+
+export const metadata = {
+  title: "Anime - Kawso.app",
+  description: "โปรเจกต์ Anime - Kaso.com คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ ",
+  icons: {
+    icon: "/favicon.png"
+  }
+};
+
+
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ['thai'],
@@ -27,15 +37,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [queryClient] = useState(() => new QueryClient());
 
   return (
     <html lang="th" className={`${notoSansThai.variable} ${notoSans.variable}`}>
       <body>
-        <QueryClientProvider client={queryClient}>
+        <RootProvider>
           <Navbar />
           {children}
-        </QueryClientProvider>
+        </RootProvider>
       </body>
     </html>
   );

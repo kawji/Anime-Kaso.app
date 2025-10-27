@@ -20,9 +20,6 @@ export default function MainContent() {
     const name = pageName as TypeMapPath
     const pageTitle = sidebarMenu.filter( (page) => page.path === pageName )
     const {data:animeList, isLoading, isError } = useAnimeList(mapPath[name](pageNumber));
-
-    console.log('--------------====== >',animeList?.data.map((anime:TypeAnime) => anime ))
-
     return(
         <main className="flex flex-col items-center  lg:pl-[5vw] flex-1 gap-4 lg:gap-6 w-full min-h-screen pt-10 sm:pt-16 bg-[#101010] ">
             <CarouselAnime />
