@@ -12,7 +12,7 @@
 - **TailwindCSS** สำหรับ UI Design
 - **TanStack Query (React Query)** สำหรับ Data Fetching & Caching
 - **Axios** ใช้เรียก API
-- **Bun** และ **npm** ใช้สลับกันสำหรับ Package Manager
+- สามารถใช้ได้ทั้ง **Bun** และ **npm** Package Manager
 - (Planning) **Database + Prisma ORM** สำหรับจัดการข้อมูล Custom เพิ่มเติมในอนาคต
 - ไลบรารี่อื่นๆ ตาม Feature ที่จะเพิ่มเติม
 
