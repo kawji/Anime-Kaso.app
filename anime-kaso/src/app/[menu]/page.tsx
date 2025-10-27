@@ -2,8 +2,9 @@ import Sidebar from "@/components/feature/layout-main/sidebar";
 import MainContent from "@/components/feature/layout-main/mainContent";
 import Recommend from "@/components/feature/layout-detail/recommend";
 import Footer from "@/components/feature/layout-footer/footer";
+import { v4 as uuidv4 } from 'uuid';
 
-export default function AnimeNoEnd() {
+export default function AnimeAll() {
   return (
     <div className="font-sans flex flex-col min-h-screen gap-0 bg-[#101010] ">
       <div className=" flex flex-col lg:flex-row overflow-x-hidden text-white pb-[1px] w-full " >

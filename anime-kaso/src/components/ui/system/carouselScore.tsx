@@ -31,7 +31,7 @@ export default function CarouselScroll({ path}:PropsCarousel ) {
                 <ArrowLeft />
             </button>
             <div style={{ scrollBehavior: 'smooth' }} ref={containerRef} className="w-full h-auto overflow-x-scroll whitespace-nowrap flex gap-5 scrollbar-hide p-2 ">
-                {isLoading?  Array.from({length:8}).map((_,i)=>  <Skeleton width="w-[270px]" height="h-[250px]" rounded="rounded-lg" key={`skeleton${i}`} />) : animeList?.data?.map((anime:TypeAnime)=> <CardAnime key={anime.mal_id} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />) }
+                {isLoading?  Array.from({length:8}).map((_,i)=>  <Skeleton width="w-[270px]" height="h-[250px]" rounded="rounded-lg" key={`skeleton${i}`} />) : animeList?.data?.map((anime:TypeAnime ,i:number )=> <CardAnime key={`${anime.mal_id}-${i}`} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />) }
             </div>
             <button className="opacity-85 hover:opacity-100 transition-all cursor-pointer group-hover:flex absolute hidden items-center justify-center p-3 right-5 top-1/2 -translate-y-1/2 text-black bg-white rounded-full z-10  "
             onClick={scrollRight}>

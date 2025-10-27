@@ -13,7 +13,7 @@ export default function Pagination() {
 
 
     return(
-        <nav className={clsx("lg:max-w-[70vw] lg:w-[88%] w-[95%] ml-0 mt-8 h-auto lg:h-15 bg-[#161515] border-white/25 border flex items-center justify-center px-6 py-4 rounded-md ", view?.desktop &&'gap-4' ,view?.tablet && 'gap-2' ,view?.phone && 'gap-0')} >
+        <nav className={clsx("lg:max-w-[70vw] lg:w-[88%] w-[95%] ml-0 mt-8 h-auto lg:h-15 bg-[#161515] border-white/7 border flex items-center justify-center px-6 py-4 rounded-md ", view?.desktop &&'gap-4' ,view?.tablet && 'gap-2' ,view?.phone && 'gap-0')} >
             { page > 1 && <ButtonPagination page={page-1} pageCurrent={page} content={'Prev'} key='prevPage' /> }
             {page > 5 && 
             <span className="flex justify-center items-center ">

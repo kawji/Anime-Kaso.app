@@ -5,7 +5,7 @@ export const mapPath = {
   '/': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`,
 
-  '/anime': (page: number) =>
+  '/anime-all': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`,
 
   '/show': (page: number) =>
@@ -14,7 +14,7 @@ export const mapPath = {
   '/noshow': (page: number) =>
     `https://api.jikan.moe/v4/anime?order_by=start_date&sort=desc&page=${page}&limit=25`, // ยังไม่มี tag สำหรับเสียงไทยใน Jikan
 
-  '/animeNoHentei': (page: number) =>
+  '/anime-n-hentei': (page: number) =>
     `https://api.jikan.moe/v4/anime?sfw=true&page=${page}&limit=25`, // อาจใช้ SFW filter ถ้ามี subtitle
 
   '/animehentai': (page: number) =>

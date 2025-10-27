@@ -1,4 +1,4 @@
-'use client'
+
 import Anime from "@/components/feature/layout-detail/anime";
 import Watch from "@/components/feature/layout-detail/watch";
 import Recommend from "@/components/feature/layout-detail/recommend";
@@ -14,9 +14,8 @@ type AnimeProps = {
 export default async function AnimeAllDetail(props:AnimeProps) {
   const params = await props?.params;
   console.log('id path',params)
-    // ป้องกันตั้งแต่ต้น ถ้า id ไม่ถูกต้อง
   if (!params.id || isNaN(Number(params.id))) {
-        return <div>Invalid Anime ID</div>; // หรือ redirect, notFound() ก็ได้
+        return <div>Invalid Anime ID</div>;
   }
 
 
@@ -26,8 +25,7 @@ export default async function AnimeAllDetail(props:AnimeProps) {
         <Watch id={params.id==='' ? Number('0'):params.id}  />
         <Recommend />
         <Footer />
-        <FormAnime />
-
+        
 
       </div>
     ); 

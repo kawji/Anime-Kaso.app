@@ -24,7 +24,7 @@ export default function Watch({ id }:PropsWatch) {
             <h1 className="flex items-center justify-start text-2xl md:text-[26px] font-bold ">ช่องทางการรับชม</h1>
             <div className="relative w-full h-auto py-5 overflow-hidden " > 
                 <div className={clsx("flex p-0 gap-5 w-full h-auto max-h-[100px] lg:max-h-[150px] overflow-x-auto scrollbar-hide " ,platformList.length > 0 ? '' : 'justify-center items-center')} >
-                    {platformList.length > 0 ?  platformList?.map((platform) => <IconWatch tagIcon={<platform.pathname />} name={platform.name} url={platform.url} />) : <h2 className="text-white/75 text-lg font-light leading-relaxed tracking-wide ">ไม่พบช่องทางการรับชม</h2>  }
+                    {platformList.length > 0 ?  platformList?.map((platform,i) => <IconWatch tagIcon={<platform.pathname />}  key={platform.name + i} name={platform.name} url={platform.url} />) : <h2 className="text-white/75 text-lg font-light leading-relaxed tracking-wide ">ไม่พบช่องทางการรับชม</h2>  }
                     <div className=" pointer-events-none absolute right-0 top-0 h-full w-18 bg-gradient-to-l from-black to-transparent z-10" />
                 </div>
 
