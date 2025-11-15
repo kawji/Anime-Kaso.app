@@ -33,7 +33,7 @@ export default function MainContent() {
                 </ContainerTitle>
 
                 <ContainerAnime>            
-                    {isLoading? Array.from({length:25}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i+1}`} />) : animeList?.data.map((anime:TypeAnime, index:number) => <CardAnime key={`${pageName}-${pageNumber}-${anime.mal_id}-${index}`} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
+                    {isLoading? Array.from({length:24}).map((_,i)=> <Skeleton width="w-[200px]" height="h-[255px]" rounded="rounded-lg" key={`loadingAnimeList${i+1}`} />) : animeList?.data.map((anime:TypeAnime, index:number) => <CardAnime key={`${pageName}-${pageNumber}-${anime.mal_id}-${index}`} id={anime.mal_id} png={anime.images.jpg.image_url} title={anime.title} favorites={anime.favorites} />)}
                 </ContainerAnime>
             </div>
 
