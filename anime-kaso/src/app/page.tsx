@@ -1,3 +1,4 @@
+'use client'
 import Sidebar from "@/components/feature/layout-main/sidebar";
 import MainContent from "@/components/feature/layout-main/mainContent";
 import Recommend from "@/components/feature/layout-detail/recommend";
