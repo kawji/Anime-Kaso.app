@@ -9,7 +9,7 @@ import { useAnimePopula } from "@/hooks/useAnimePopula";
 import { TypeAnime } from "@/type/TypeAnime";
 
 export default function Sidebar() {
-    let namePath = usePathname();
+    const namePath = usePathname();
     const { data:animeList ,isLoading ,isError} = useAnimePopula(10);
 
     return(
