@@ -13,7 +13,7 @@ export default function Sidebar() {
     const { data:animeList ,isLoading ,isError} = useAnimePopula(10);
 
     return(
-        <aside  className=" p-5 lg:pb-0 lg:pl-10 flex flex-col gap-8 lg:gap-15 left-0 shrink-0 shadow-sm shadow-white/30 items-center lg:items-start w-full lg:w-[260px] lg:pt-[var(--start-top)] pl-[var(--start-left)] min-h-screen bg-[#131313] relative z-99 ">
+        <aside  className=" p-5 lg:pb-0 lg:pl-10 flex flex-col gap-8 lg:gap-15 left-0 shrink-0 shadow-sm shadow-white/30 items-center lg:items-start w-full lg:w-[260px] lg:pt-[var(--start-top)] pl-[var(--start-left)] min-h-full bg-[#131313] relative z-99 ">
             <div className="flex flex-col items-start gap-2 shrink-0 w-full p-5 rounded-xl border border-white/20 lg:p-0 lg:border-none" >
                 <TitleSidebar title='หมวดหมู่' />
                 {sidebarMenu.map((item) =>{
