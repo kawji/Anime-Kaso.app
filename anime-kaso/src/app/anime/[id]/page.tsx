@@ -1,4 +1,4 @@
-
+'use client'
 import Anime from "@/components/feature/layout-detail/anime";
 import Watch from "@/components/feature/layout-detail/watch";
 import Recommend from "@/components/feature/layout-detail/recommend";
