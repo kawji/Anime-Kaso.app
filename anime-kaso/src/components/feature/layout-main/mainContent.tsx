@@ -1,4 +1,3 @@
-// ui
 'use client'
 import TitleContent from "@/components/ui/main-content/main-anime/titleContent";
 import ContainerAnime from "@/components/ui/main-content/main-anime/containerAnime";
