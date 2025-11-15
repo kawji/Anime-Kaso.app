@@ -10,7 +10,7 @@ export default function Home() {
     <Suspense>
       <div className="font-sans flex flex-col min-h-screen gap-0 bg-[#101010] ">
         <div className=" flex flex-col lg:flex-row overflow-x-hidden text-white pb-[1px] w-full " >
-          <div className="hidden w-auto h-auto p-0 m-0 order-1 lg:block  ">
+          <div className="hidden w-auto h-full p-0 m-0 order-1 lg:block  ">
             <Sidebar />
           </div>
           <div className=" h-auto p-0 m-0 order-2 w-full">
