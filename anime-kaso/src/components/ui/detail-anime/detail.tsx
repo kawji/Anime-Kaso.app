@@ -50,7 +50,7 @@ export default function DetailAnime({title ,season ,sub_title ,discliption}:Deta
             <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer  " onClick={copyToClipboard} >
                 <Share2 />
             </button>
-            <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer  "  >
+            <button className=" p-3 rounded-full hover:bg-white/85 hover:text-black transition-all cursor-pointer hidden "  >
                 <Wrench />
             </button>
             
