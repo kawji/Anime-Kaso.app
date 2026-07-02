@@ -1,8 +1,9 @@
 # Anime - Kaso.app
 
-โปรเจกต์ **Anime - Kaso.app** คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ (Anime Information)  
-โดยใช้ **[Jikan API](https://jikan.moe)** ในการดึงข้อมูลจาก **MyAnimeList** และเสริมด้วย **Custom Platform Info**  
-เช่น Netflix, iQIYI, Bilibili, YouTube พร้อมข้อมูล **ซับไทย/พากย์ไทย**
+> [!CAUTION]
+> **คำเตือน (Warning):** โปรเจกต์นี้เป็นโปรเจกต์เก่าที่ปัจจุบัน**ไม่ได้รับการสนับสนุนหรือดูแลต่อแล้ว (Deprecated)** เนื่องจากระบบดึงข้อมูล (API) มีการอัปเดตความปลอดภัยใหม่ ส่งผลให้ระบบไม่สามารถดึงข้อมูลอนิเมะมาแสดงผลได้ตามปกติและอาจเกิดข้อผิดพลาด (Errors) ในการทำงาน
+
+โปรเจกต์ **Anime - Kaso.app** คือเว็บไซต์ที่พัฒนาเพื่อแสดงข้อมูลอนิเมะ (Anime Information) โดยใช้ **[Jikan API](https://jikan.moe)** ในการดึงข้อมูลจาก **MyAnimeList** และเสริมด้วย **Custom Platform Info** เช่น Netflix, iQIYI, Bilibili, YouTube พร้อมข้อมูล **ซับไทย/พากย์ไทย**
 
 ---
 
@@ -25,3 +26,4 @@ Clone โปรเจกต์นี้จาก GitHub:
 ```bash
 git clone https://github.com/your-username/anime-kaso.com.git
 cd anime-kaso
+```
